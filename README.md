@@ -1,21 +1,7 @@
 <html>
 <head>
-  <title></title>
-  <style>
-    body {
-      background: #0d1117;
-      color: white;
-      font-family: monospace;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
-
-    .name {
       font-size: 50px;
       font-weight: bold;
-      background: linear-gradient(90deg, #58a6ff, #bc8cff, #ff7b72);
       -webkit-background-clip: text;
       color: transparent;
       text-align: center;
