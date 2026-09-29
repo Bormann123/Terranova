@@ -1,6 +1,6 @@
 <html>
 <head>
-  <title>Terranov</title>
+  <title></title>
   <style>
     body {
       background: #0d1117;
@@ -33,7 +33,7 @@
 <body>
   <div>
     <div class="name">Terranova</div>
-    <div class="sub">× Nail Huda | Nabil Faizal</div>
+    <div class="sub">Nail Huda | Nabil Faizal</div>
   </div>
 </body>
 </html>
