@@ -1,6 +1,6 @@
 <html>
 <head>
-  <title>Terranova</title>
+  <title>Terranov</title>
   <style>
     body {
       background: #0d1117;
