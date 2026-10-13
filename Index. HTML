@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+
+    <!-- Banner: change the image link inside style.css (.banner::before) -->
+    <div class="banner">
+      <div class="badge">LOGO</div>
+      <p class="tag">Lorem ipsum dolor</p>
+      <h1>NAME</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+      <a href="#anggota" class="button">#LOREM.IPSUM.DOLOR</a>
+    </div>
+
+    <div class="marquee">
+      <p>LOREM ✦ IPSUM ✦ DOLOR ✦ SIT AMET ✦ CONSECTETUR ✦ ADIPISCING ✦ ELIT ✦ LOREM ✦ IPSUM ✦ DOLOR ✦ SIT AMET ✦</p>
+    </div>
+
+    <ul>
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="desain.html">Design</a></li>
+      <li><a href="produk.html">Products</a></li>
+    </ul>
+
+    <!-- ABOUT KELOMPOK -->
+    <h2>About <span>Kelompok</span></h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
+
+    <div class="panel">
+      <div class="cards">
+        <div class="card">
+          <div class="icon">💡</div>
+          <h3>Lorem Ipsum</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="card">
+          <div class="icon">👕</div>
+          <h3>Dolor Sit</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="card">
+          <div class="icon">⏰</div>
+          <h3>Amet Elit</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ANGGOTA -->
+    <h2 id="anggota">Our <span>Member</span></h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+    <div class="members">
+      <div class="member">
+        <img src="https://picsum.photos/seed/m1/300">
+        <h3>~ Nama Anggota 1 ~</h3>
+        <p>Lorem Ipsum</p>
+      </div>
+      <div class="member">
+        <img src="https://picsum.photos/seed/m2/300">
+        <h3>~ Nama Anggota 2 ~</h3>
+        <p>Dolor Sit</p>
+      </div>
+      <div class="member">
+        <img src="https://picsum.photos/seed/m3/300">
+        <h3>~ Nama Anggota 3 ~</h3>
+        <p>Amet Elit</p>
+      </div>
+      <div class="member">
+        <img src="https://picsum.photos/seed/m4/300">
+        <h3>~ Nama Anggota 4 ~</h3>
+        <p>Sed Eiusmod</p>
+      </div>
+    </div>
+
+    <!-- PRESENTATION -->
+    <h2>Pre<span>sentation</span></h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+    <div class="frame">
+      <!-- Paste your PPT embed link inside src="" -->
+      <iframe src="" title="Presentation"></iframe>
+    </div>
+
+    <footer>
+      <div class="logo">LOGO</div>
+      <p>LOREM IPSUM DOLOR SIT</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor.</p>
+      <div class="socials">
+        <a href="#">IG</a>
+        <a href="#">YT</a>
+        <a href="#">✉</a>
+      </div>
+      <p>Telp : 000 0000 0000</p>
+      <p>Email : lorem@ipsum.com</p>
+    </footer>
+
+  </body>
+</html>
