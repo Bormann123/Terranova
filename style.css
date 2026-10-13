@@ -115,15 +115,6 @@ html::after {
 }
 
 
-.banner::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: url("https://picsum.photos/seed/banner/1200/800") center / cover;
-  animation: zoom 14s ease-in-out infinite alternate;
-}
-
-
 .banner::after {
   content: "";
   position: absolute;
@@ -272,7 +263,6 @@ ul a.active {
   box-shadow: 0 0 20px rgba(111, 177, 255, 0.6);
 }
 
-/* big screens: small links on the left, text on the right */
 @media (min-width: 700px) {
   li {
     flex: none;
@@ -280,15 +270,6 @@ ul a.active {
 
   ul a {
     padding: 11px 28px;
-  }
-
-  ul::after {
-    content: "✦ LOREM IPSUM DOLOR";
-    margin-left: auto;
-    padding-right: 24px;
-    color: #6fb1ff;
-    font-size: 13px;
-    letter-spacing: 3px;
   }
 }
 
@@ -395,14 +376,17 @@ body > .cards {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  align-items: flex-start;
   gap: 30px 20px;
   margin-top: 30px;
+  padding-bottom: 40px;
 }
 
 .member {
   flex: 1 1 140px;
   max-width: 220px;
   text-align: center;
+  transition: transform 0.4s;
 }
 
 .member img {
@@ -429,6 +413,19 @@ body > .cards {
   font-weight: bold;
   color: #d6d6e8;
 }
+
+.member:nth-child(1) { transform: rotate(-4deg) translateY(10px); }
+.member:nth-child(2) { transform: rotate(3deg) translateY(-25px); }
+.member:nth-child(3) { transform: rotate(-2deg) translateY(35px); }
+.member:nth-child(4) { transform: rotate(5deg) translateY(-10px); }
+.member:nth-child(5) { transform: rotate(-3deg) translateY(25px); }
+
+.member:hover {
+  transform: rotate(0) translateY(0) scale(1.05);
+}
+
+.member:nth-child(2) img { border-radius: 42% 58% 55% 45%; }
+.member:nth-child(4) img { border-radius: 58% 42% 45% 55%; }
 
 @keyframes ring {
   0%, 100% { box-shadow: 0 0 0 0 rgba(111, 177, 255, 0.6); }
@@ -521,18 +518,24 @@ footer p {
 }
 
 .logo {
-  width: 64px;
-  height: 64px;
+  width: 310px;
+  height: 190px;
   margin-bottom: 14px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50%;
-  background: #ffe92b;
-  color: #1a416e;
-  font-size: 12px;
-  font-weight: bold;
+  overflow: visible;
+  border-radius: 0;
+  background: transparent;
+  
   animation: bob 4s ease-in-out infinite alternate;
+}
+
+.logo img {
+  display: block;
+  width: 180%;
+  height: 180%;
+  object-fit: contain;
 }
 
 .socials {
