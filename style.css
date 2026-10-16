@@ -91,6 +91,13 @@ html::after {
   animation: shoot 9s linear infinite;
 }
 
+/* hide the big planet on phones so it doesn't cover the member photos */
+@media (max-width: 699px) {
+  html::before {
+    display: none;
+  }
+}
+
 @keyframes drift   { to { background-position: 0 -300px; } }
 @keyframes drift2  { to { background-position: 0 -450px; } }
 @keyframes twinkle { 50% { opacity: 0.3; } }
@@ -372,10 +379,12 @@ body > .cards {
 }
 
 
+/* ---------- MEMBERS (fixed) ---------- */
+
 .members {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: flex-start;
   gap: 30px 20px;
   margin-top: 30px;
@@ -383,18 +392,20 @@ body > .cards {
 }
 
 .member {
-  flex: 1 1 140px;
+  flex: 0 1 calc(50% - 10px);   /* 2 per row on phones */
   max-width: 220px;
   text-align: center;
   transition: transform 0.4s;
 }
 
 .member img {
+  display: block;
   width: 100%;
   aspect-ratio: 1;
   object-fit: cover;
   border: 5px solid #6fb1ff;
-  border-radius: 50%;
+  border-radius: 50%;           /* always a perfect circle */
+  background: #0d0c52;          /* solid fill so stars/planet never show through */
   transition: 0.4s;
   animation: ring 3s ease-in-out infinite;
 }
@@ -414,18 +425,29 @@ body > .cards {
   color: #d6d6e8;
 }
 
-.member:nth-child(1) { transform: rotate(-4deg) translateY(10px); }
-.member:nth-child(2) { transform: rotate(3deg) translateY(-25px); }
-.member:nth-child(3) { transform: rotate(-2deg) translateY(35px); }
-.member:nth-child(4) { transform: rotate(5deg) translateY(-10px); }
-.member:nth-child(5) { transform: rotate(-3deg) translateY(25px); }
+/* tilted / staggered layout on wide screens only */
+@media (min-width: 700px) {
+  .members {
+    justify-content: space-between;
+  }
 
-.member:hover {
-  transform: rotate(0) translateY(0) scale(1.05);
+  .member {
+    flex: 1 1 140px;
+  }
+
+  .member:nth-child(1) { transform: rotate(-4deg) translateY(10px); }
+  .member:nth-child(2) { transform: rotate(3deg) translateY(-25px); }
+  .member:nth-child(3) { transform: rotate(-2deg) translateY(35px); }
+  .member:nth-child(4) { transform: rotate(5deg) translateY(-10px); }
+  .member:nth-child(5) { transform: rotate(-3deg) translateY(25px); }
+
+  .member:hover {
+    transform: rotate(0) translateY(0) scale(1.05);
+  }
+
+  .member:nth-child(2) img { border-radius: 42% 58% 55% 45%; }
+  .member:nth-child(4) img { border-radius: 58% 42% 45% 55%; }
 }
-
-.member:nth-child(2) img { border-radius: 42% 58% 55% 45%; }
-.member:nth-child(4) img { border-radius: 58% 42% 45% 55%; }
 
 @keyframes ring {
   0%, 100% { box-shadow: 0 0 0 0 rgba(111, 177, 255, 0.6); }
@@ -527,7 +549,7 @@ footer p {
   overflow: visible;
   border-radius: 0;
   background: transparent;
-  
+
   animation: bob 4s ease-in-out infinite alternate;
 }
 
