@@ -91,13 +91,6 @@ html::after {
   animation: shoot 9s linear infinite;
 }
 
-/* hide the big planet on phones so it doesn't cover the member photos */
-@media (max-width: 699px) {
-  html::before {
-    display: none;
-  }
-}
-
 @keyframes drift   { to { background-position: 0 -300px; } }
 @keyframes drift2  { to { background-position: 0 -450px; } }
 @keyframes twinkle { 50% { opacity: 0.3; } }
