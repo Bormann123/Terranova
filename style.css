@@ -388,7 +388,7 @@ body > .cards {
   align-items: flex-start;
   gap: 30px 20px;
   margin-top: 30px;
-  padding-bottom: 40px;
+  padding-bottom: 110px;
 }
 
 .member {
@@ -425,7 +425,13 @@ body > .cards {
   color: #d6d6e8;
 }
 
-/* tilted / staggered layout on wide screens only */
+/* zigzag layout: left column high, right column lower */
+.member:nth-child(odd)  { transform: none; }
+.member:nth-child(even) { transform: translateY(70px); }
+
+.member:nth-child(odd):hover  { transform: scale(1.05); }
+.member:nth-child(even):hover { transform: translateY(70px) scale(1.05); }
+
 @media (min-width: 700px) {
   .members {
     justify-content: space-between;
@@ -434,19 +440,6 @@ body > .cards {
   .member {
     flex: 1 1 140px;
   }
-
-  .member:nth-child(1) { transform: rotate(-4deg) translateY(10px); }
-  .member:nth-child(2) { transform: rotate(3deg) translateY(-25px); }
-  .member:nth-child(3) { transform: rotate(-2deg) translateY(35px); }
-  .member:nth-child(4) { transform: rotate(5deg) translateY(-10px); }
-  .member:nth-child(5) { transform: rotate(-3deg) translateY(25px); }
-
-  .member:hover {
-    transform: rotate(0) translateY(0) scale(1.05);
-  }
-
-  .member:nth-child(2) img { border-radius: 42% 58% 55% 45%; }
-  .member:nth-child(4) img { border-radius: 58% 42% 45% 55%; }
 }
 
 @keyframes ring {
