@@ -149,7 +149,7 @@ html::after {
 h1 {
   margin: 0 0 14px;
   font-family: "Archivo Black", Arial, sans-serif;
-  font-weight: 400;
+  font-weight: 100;
   font-size: clamp(52px, 19vw, 170px);
   line-height: 1;
   filter: drop-shadow(0 0 18px rgba(111, 177, 255, 0.6));
