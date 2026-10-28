@@ -1,74 +1,243 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Rubik+Mono+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Rubik+Mono+One&family=Chakra+Petch:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
   </head>
 
   <body>
     <div class="banner">
-      <div class="logo">
-  <img src="Logo.png" alt="Logo">
+      <div class="topbar">
+        <div class="logo">
+          <img src="Logo.png" alt="Logo">
+        </div>
+
+        <div class="menu-wrap">
+          <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+          <ul id="menu">
+            <li><a href="index.html" class="active">Beranda</a></li>
+            <li><a href="desain.html">Design</a></li>
+            <li><a href="produk.html">Product</a></li>
+          </ul>
+        </div>
       </div>
-      <p class="tag">Kelompok 7</p>
-      <h1>NORRA</h1>
-      <p></p>
-      <a href="#anggota" class="button">T E R R A N O V A</a>
+
+      <h1><span class="terra">TERRA</span><span class="nova">NOVA</span></h1>
+
+      <button class="button" id="aboutBtn" aria-expanded="false">Tentang Logo</button>
+
+      <div class="about" id="about">
+        <div class="about-inner">
+          <div class="about-box">
+            <h3>About Kelompok</h3>
+            <p>NORRA merupakan gabungan kata Nova dan Terra yang berarti Bumi Baru. Logo ini melambangkan awal baru, harapan, persatuan, dan semangat menciptakan masa depan yang lebih baik. Warna biru menggambarkan kepercayaan, 
+      hijau melambangkan kehidupan, dan bentuk lingkaran melambangkan kebersamaan..</p>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <ul>
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="desain.html">Design</a></li>
-      <li><a href="produk.html">Products</a></li>
-    </ul>
-
-    <h2>About <span>Kelompok</span></h2>
-    <p>NORRA merupakan gabungan kata Nova dan Terra yang berarti Bumi Baru. Logo ini melambangkan awal baru, harapan, persatuan, dan semangat menciptakan masa depan yang lebih baik. Warna biru menggambarkan kepercayaan, 
-      hijau melambangkan kehidupan, dan bentuk lingkaran melambangkan kebersamaan..</p>
-
     <h2 id="anggota">Our <span>Member</span></h2>
-    <p>.</p>
 
     <div class="members">
-      <div class="member">
-        <img src="photo">
+      <div class="member" data-key="alyeva" role="button" tabindex="0">
+        <img src="Alyeva.jpg">
         <h3>~ Graphic Designer ~</h3>
         <p>Alyeva Putri Rafinah</p>
       </div>
-      <div class="member">
-        <img src="photo">
+      <div class="member" data-key="khanza" role="button" tabindex="0">
+        <img src="khanza.jpg">
         <h3>~ Content Writer ~</h3>
         <p>Khanza Mardiyah</p>
       </div>
-      <div class="member">
-        <img src="photo">
+      <div class="member" data-key="nabil" role="button" tabindex="0">
+        <img src="IMG_20261029_052012.jpg">
         <h3>~ Web Developer ~</h3>
         <p>Nabil Faizal Mahdi</p>
       </div>
-      <div class="member">
-        <img src="photo">
+      <div class="member" data-key="nail" role="button" tabindex="0">
+        <img src="nail.jpg">
         <h3>~ App Programmer ~</h3>
         <p>Nail Huda Dharmawan</p>
       </div>
     </div>
 
-    
     <h2>Pre<span>sentation</span></h2>
-    <p></p>
 
     <div class="frame">
-      <iframe src="" title="Presentation"></iframe>
+      <div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
+ padding-bottom: 0; margin: 0; overflow: hidden;
+ border-radius: 24px; will-change: transform;">
+        <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+          src="https://www.canva.com/design/DAHZQs2sKKo/c-o0j_5wcGmnU0HIViBErw/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+        </iframe>
+      </div>
     </div>
+    <p class="credit"><a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAHZQs2sKKo&#x2F;c-o0j_5wcGmnU0HIViBErw&#x2F;view?utm_content=DAHZQs2sKKo&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener"></a> </p>
 
     <footer>
-      <p></p>
-      <div class="socials">
-        <a href="#">👍</a>
-        <a href="#">🤍</a>
-        <a href="#">📨</a>
+      <div>
+        <p class="footer-title">Kelompok 7</p>
+        <p>SMA Negeri 71 Jakarta, Jl. SMAN 71 No.10A, Duren Sawit, Jakarta Timur 13440</p>
+        <p>Dibuat pada 25 Oktober 2026</p>
+      </div>
+      <div class="logo-sma">
+        <img src="image05.png" alt="Logo SMA 71">
       </div>
     </footer>
 
+    <div class="modal" id="modal" aria-hidden="true">
+      <div class="profile-card" role="dialog" aria-modal="true" aria-labelledby="pName">
+        <button class="modal-close" id="modalClose" aria-label="Tutup">&times;</button>
+        <div class="profile-top">
+          <img id="pImg" src="" alt="">
+          <div>
+            <h3 id="pName"></h3>
+            <p class="role" id="pRole"></p>
+            <p class="label">Aplikasi</p>
+            <ol class="tasks" id="pTasks"></ol>
+          </div>
+        </div>
+        <div class="profile-desc">
+          <p class="label">Tugas</p>
+          <p id="pDesc"></p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const members = {
+        alyeva: {
+          name: "Alyeva Putri Rafinah",
+          role: "Graphic Designer",
+          apps: ["Ibis Paint X", "Canva"],
+          desc: "Bertugas merancang logo Terra Nova, menentukan palet warna dan gaya visual, serta membuat semua aset gambar yang dipakai pada website dan presentasi."
+        },
+        khanza: {
+          name: "Khanza Mardiyah",
+          role: "Content Writer",
+          apps: ["Google Docs", "Microsoft Word", "Canva"],
+          desc: "Bertugas menulis makna logo, deskripsi kelompok, dan isi presentasi, serta memastikan semua tulisan rapi, benar, dan mudah dipahami."
+        },
+        nabil: {
+          name: "Nabil Faizal Mahdi",
+          role: "Web Developer",
+          apps: ["HTML", "CSS", "Github", "Codepen"],
+          desc: "Bertugas membangun website ini, mulai dari struktur halaman, tampilan, dan animasi, sampai menghubungkan semua halaman menjadi satu."
+        },
+        nail: {
+          name: "Nail Huda Dharmawan",
+          role: "App Programmer",
+          apps: ["Codepen", "Github"],
+          desc: "Bertugas membuat aplikasi kelompok, menyusun fitur-fiturnya, menguji cara kerjanya, dan memperbaiki bug yang ditemukan."
+        }
+      };
+
+      const $ = (id) => document.getElementById(id);
+      const burger = $("burger"), menu = $("menu");
+      const aboutBtn = $("aboutBtn"), about = $("about");
+      const modal = $("modal");
+      let lastBtn = null;
+
+      function setMenu(open) {
+        menu.classList.toggle("open", open);
+        burger.setAttribute("aria-expanded", open);
+      }
+
+      const reduce = matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+      function flyFrom(btn, card) {
+        const a = btn.querySelector("img").getBoundingClientRect();
+        const b = card.getBoundingClientRect();
+        const dx = a.left + a.width / 2 - (b.left + b.width / 2);
+        const dy = a.top + a.height / 2 - (b.top + b.height / 2);
+        return `translate(${dx}px, ${dy}px) scale(${a.width / b.width})`;
+      }
+
+      function openProfile(btn) {
+        if (modal.classList.contains("open")) return;
+        btn.classList.add("tap");
+        setTimeout(() => btn.classList.remove("tap"), 450);
+        setTimeout(() => showProfile(btn), 180);
+      }
+
+      function showProfile(btn) {
+        const m = members[btn.dataset.key];
+        lastBtn = btn;
+        $("pImg").src = btn.querySelector("img").src;
+        $("pImg").alt = m.name;
+        $("pName").textContent = m.name;
+        $("pRole").textContent = m.role;
+        $("pDesc").textContent = m.desc;
+        $("pTasks").innerHTML = "";
+        m.apps.forEach((t, i) => {
+          const li = document.createElement("li");
+          li.textContent = t;
+          li.style.setProperty("--i", i);
+          $("pTasks").appendChild(li);
+        });
+        modal.classList.add("open");
+        modal.setAttribute("aria-hidden", "false");
+        document.body.classList.add("lock");
+        $("modalClose").focus({ preventScroll: true });
+        if (!reduce) {
+          const card = modal.querySelector(".profile-card");
+          card.animate([
+            { transform: flyFrom(btn, card), opacity: 0, borderRadius: "600px" },
+            { opacity: 1, offset: 0.35 },
+            { transform: "none", opacity: 1, borderRadius: "25px" }
+          ], { duration: 700, easing: "cubic-bezier(0.2, 0.85, 0.25, 1.08)" });
+        }
+      }
+
+      function closeProfile() {
+        if (!modal.classList.contains("open") || modal.classList.contains("closing")) return;
+        modal.classList.add("closing");
+        const card = modal.querySelector(".profile-card");
+        if (!reduce && lastBtn) {
+          card.animate([
+            { transform: "none", opacity: 1, borderRadius: "25px" },
+            { transform: flyFrom(lastBtn, card), opacity: 0, borderRadius: "600px" }
+          ], { duration: 420, easing: "cubic-bezier(0.5, 0, 0.75, 0)", fill: "forwards" });
+        }
+        setTimeout(() => {
+          card.getAnimations().forEach((a) => a.cancel());
+          modal.classList.remove("open", "closing");
+          modal.setAttribute("aria-hidden", "true");
+          document.body.classList.remove("lock");
+          if (lastBtn) lastBtn.focus();
+        }, 420);
+      }
+
+      burger.addEventListener("click", (e) => {
+        e.stopPropagation();
+        setMenu(!menu.classList.contains("open"));
+      });
+
+      document.addEventListener("click", (e) => {
+        if (!menu.contains(e.target)) setMenu(false);
+      });
+
+      aboutBtn.addEventListener("click", () => {
+        aboutBtn.setAttribute("aria-expanded", about.classList.toggle("open"));
+      });
+
+      document.querySelectorAll(".member").forEach((b) => {
+        b.addEventListener("click", () => openProfile(b));
+        b.addEventListener("keydown", (e) => {
+          if (e.key === "Enter" || e.key === " ") { e.preventDefault(); openProfile(b); }
+        });
+      });
+
+      $("modalClose").addEventListener("click", closeProfile);
+      modal.addEventListener("click", (e) => { if (e.target === modal) closeProfile(); });
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") { closeProfile(); setMenu(false); }
+      });
+    </script>
   </body>
 </html>
