@@ -426,7 +426,7 @@ body > .cards {
 }
 
 .member {
-  flex: 0 1 calc(50% - 10px);   /* 2 per row on phones */
+  flex: 0 1 calc(50% - 10px);   
   max-width: 220px;
   text-align: center;
   transition: transform 0.4s;
@@ -439,8 +439,8 @@ body > .cards {
   aspect-ratio: 1;
   object-fit: cover;
   border: 5px solid #6fb1ff;
-  border-radius: 50%;           /* always a perfect circle */
-  background: #0d0c52;          /* solid fill so stars/planet never show through */
+  border-radius: 50%;           
+  background: #0d0c52;          
   transition: 0.4s;
   animation: ring 3s ease-in-out infinite;
 }
@@ -464,7 +464,6 @@ body > .cards {
   color: #d6d6e8;
 }
 
-/* zigzag layout: left column high, right column lower */
 .member:nth-child(odd)  { transform: none; }
 .member:nth-child(even) { transform: translateY(70px); }
 
@@ -609,8 +608,8 @@ footer .footer-title {
 
 .logo img {
   display: block;
-  width: 180%;
-  height: 180%;
+  width: 220%;
+  height: 220%;
   object-fit: contain;
 }
 
