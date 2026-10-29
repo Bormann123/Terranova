@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@100..900&display=swap");
 
 * {
   box-sizing: border-box;
@@ -148,8 +148,8 @@ html::after {
 
 h1 {
   margin: 0 0 14px;
-  font-family: "Archivo Black", Arial, sans-serif;
-  font-weight: 100;
+font-family: Archivo, Arial, sans-serif;
+font-weight: 500;
   font-size: clamp(52px, 19vw, 170px);
   line-height: 1;
   filter: drop-shadow(0 0 18px rgba(111, 177, 255, 0.6));
@@ -608,8 +608,8 @@ footer .footer-title {
 
 .logo img {
   display: block;
-  width: 260%;
-  height: 260%;
+  width: 275%;
+  height: 275%;
   object-fit: contain;
 }
 
